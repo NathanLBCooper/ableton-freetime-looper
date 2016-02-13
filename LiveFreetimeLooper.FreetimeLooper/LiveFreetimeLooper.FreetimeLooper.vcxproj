@@ -39,6 +39,7 @@
     <ClInclude Include="States\InitialLoopWaitingState.hpp" />
     <ClInclude Include="States\RunningState.hpp" />
     <ClInclude Include="States\StateBase.hpp" />
+    <ClInclude Include="States\StateFactory.hpp" />
     <ClInclude Include="Utilities\AsyncTimer.hpp" />
     <ClInclude Include="Utilities\AsyncTimerFactory.hpp" />
     <ClInclude Include="Utilities\ConcurrentQueue.hpp" />
@@ -62,6 +63,7 @@
     <ClCompile Include="States\InitialLoopState.cpp" />
     <ClCompile Include="States\InitialLoopWaitingState.cpp" />
     <ClCompile Include="States\RunningState.cpp" />
+    <ClCompile Include="States\StateFactory.cpp" />
     <ClCompile Include="Utilities\AsyncTimer.cpp" />
     <ClCompile Include="Utilities\AsyncTimerFactory.cpp" />
     <ClCompile Include="Utilities\RtMidiExt.cpp" />
