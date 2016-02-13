@@ -155,3 +155,5 @@ TEST_CASE("The Loop quantising interval is correctly set and works as expected")
 
     REQUIRE(dispatcherMock.getMessages().size() == 6);
 }
+
+// todo MessageCancellingIdeas: have message cancelling involved
