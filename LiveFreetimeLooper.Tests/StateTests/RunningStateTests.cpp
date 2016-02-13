@@ -165,6 +165,62 @@ TEST_CASE("Running State")
         REQUIRE(dispatcherMock.getMessages().size() == 8);
     }
 
+    //// todo MessageCancellingIdeas
+    //// Alternative to "A message is relayed, but ignored for quantising purposes, after the second occurance"
+    //SECTION("The third occurance of a message cancels the loop")
+    //{
+    //    state->handle(state, std::make_unique<Message>(messagePayload));
+    //    REQUIRE(dispatcherMock.getMessages().size() == 0); // LOOP START
+
+    //    timer->step(); timer->step();
+
+    //    REQUIRE(dispatcherMock.getMessages().size() == 1);
+    //    state->handle(state, std::make_unique<Message>(messagePayload));
+
+    //    timer->step(); // LOOP END + LOOP RESTART
+    //    REQUIRE(dispatcherMock.getMessages().size() == 3);
+    //    state->handle(state, std::make_unique<Message>(messagePayload));
+    //    timer->step(); // CANCEL MESSAGE
+    //    REQUIRE(dispatcherMock.getMessages().size() == 4);
+    //    timer->step(); timer->step(); timer->step(); timer->step(); timer->step();
+    //    timer->step(); timer->step(); timer->step(); timer->step(); timer->step();
+    //    timer->step(); timer->step(); timer->step(); timer->step(); timer->step();
+    //    REQUIRE(dispatcherMock.getMessages().size() == 4);
+    //}
+
+    //// todo MessageCancellingIdeas
+    //// Alternative to "A message is relayed, but ignored for quantising purposes, after the second occurance"
+    //SECTION("A cancelled loop can be rerecorded")
+    //{
+    //    state->handle(state, std::make_unique<Message>(messagePayload));
+    //    REQUIRE(dispatcherMock.getMessages().size() == 0); // LOOP START
+
+    //    timer->step(); timer->step();
+
+    //    REQUIRE(dispatcherMock.getMessages().size() == 1);
+    //    state->handle(state, std::make_unique<Message>(messagePayload));
+
+    //    timer->step(); // LOOP END + LOOP RESTART
+    //    REQUIRE(dispatcherMock.getMessages().size() == 3);
+    //    state->handle(state, std::make_unique<Message>(messagePayload));
+    //    timer->step(); // CANCEL MESSAGE
+    //    REQUIRE(dispatcherMock.getMessages().size() == 4);
+    //    timer->step(); timer->step(); timer->step(); timer->step(); timer->step();
+    //    timer->step(); timer->step(); timer->step(); timer->step(); timer->step();
+    //    timer->step(); timer->step(); timer->step(); timer->step(); timer->step();
+    //    REQUIRE(dispatcherMock.getMessages().size() == 4);
+
+    //    state->handle(state, std::make_unique<Message>(messagePayload)); // RERECORD START MESSAGE
+    //    timer->step(); timer->step();
+    //    REQUIRE(dispatcherMock.getMessages().size() == 5);
+    //    state->handle(state, std::make_unique<Message>(messagePayload)); // RERECORD END MESSAGE
+    //    timer->step();
+    //    REQUIRE(dispatcherMock.getMessages().size() == 6);
+    //    timer->step(); timer->step();
+    //    REQUIRE(dispatcherMock.getMessages().size() == 7);
+    //    //todo I think
+    //}
+
     SECTION("Running State returns CreatedState when StdIn supplied")
     {
         state->handleStdin(state, std::string("any string value"));
